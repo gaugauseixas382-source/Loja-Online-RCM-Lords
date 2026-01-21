@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Loja Oficial RCM Lords</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Biblioteca externa: Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Biblioteca externa: Animate.css para animações -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo-area">
+            <span class="logo-mark">RCM</span>
+            <div class="logo-text">
+                <span class="band-name">RCM Lords</span>
+                <span class="tagline">Loja Oficial da Banda</span>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" class="active">Loja</a></li>
+                <li><a href="#">Tour</a></li>
+                <li><a href="#">Música</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero animate__animated animate__fadeIn">
+            <div class="hero-content">
+                <h1>Merch oficial <span>RCM Lords</span></h1>
+                <p>CDs, vinis e merchandise exclusivo para verdadeiros fãs. Compras rápidas com cálculo automático do valor total.</p>
+                <a href="#product-section" class="btn-primary">
+                    <i class="fa-solid fa-arrow-down"></i>
+                    Ver catálogo
+                </a>
+            </div>
+        </section>
+
+        <section id="product-section" class="content-section">
+            <header class="section-header">
+                <h2>Catálogo de Produtos</h2>
+                <p>Filtre, explore e veja os detalhes de cada produto.</p>
+            </header>
+
+            <div id="filter-section" class="filter-section">
+                <div class="filter-group">
+                    <label for="category-filter">Filtrar por categoria</label>
+                    <select id="category-filter">
+                        <option value="">Todas as categorias</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="search-input">Procurar produto</label>
+                    <input type="text" id="search-input" placeholder="Ex.: T-Shirt, CD, Vinil...">
+                </div>
+
+                <div class="filter-group">
+                    <label for="sort-select">Ordenar por</label>
+                    <select id="sort-select">
+                        <option value="default">Padrão</option>
+                        <option value="price-asc">Preço: menor para maior</option>
+                        <option value="price-desc">Preço: maior para menor</option>
+                        <option value="name-asc">Nome: A-Z</option>
+                    </select>
+                </div>
+
+                <button id="clear-filters" class="btn-secondary">
+                    <i class="fa-solid fa-eraser"></i>
+                    Limpar filtros
+                </button>
+            </div>
+
+            <div id="feedback-area" aria-live="polite"></div>
+
+            <div id="product-list" class="product-list">
+                <!-- Produtos serão carregados aqui via JavaScript -->
+            </div>
+
+            <div id="loading" class="loading hidden">
+                <span class="spinner"></span>
+                <span>A carregar catálogo...</span>
+            </div>
+        </section>
+
+        <section id="order-form" class="content-section order-section">
+            <header class="section-header">
+                <h2>Calcular Valor Total</h2>
+                <p>Selecione um produto, escolha a quantidade e veja o valor final automaticamente.</p>
+            </header>
+
+            <form id="calc-form" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="product">Escolha um produto</label>
+                        <select id="product" name="product">
+                            <option value="">-- Selecione um produto --</option>
+                        </select>
+                        <small class="error-message" id="product-error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Quantidade</label>
+                        <input type="number" id="quantity" name="quantity" min="1" value="1">
+                        <small class="error-message" id="quantity-error"></small>
+                    </div>
+                </div>
+
+                <button type="button" id="calculate" class="btn-primary">
+                    <i class="fa-solid fa-calculator"></i>
+                    Calcular valor
+                </button>
+            </form>
+
+            <div id="total-value" class="total-value" aria-live="polite">
+                <!-- Valor total do formulário será exibido aqui -->
+            </div>
+
+            <div id="cart-summary" class="cart-summary">
+                <h3><i class="fa-solid fa-cart-shopping"></i> Carrinho</h3>
+                <ul id="cart-items"></ul>
+                <p id="cart-total">Total: 0,00 €</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox para detalhes do produto -->
+    <div id="lightbox" class="lightbox hidden" aria-hidden="true">
+        <div class="lightbox-overlay"></div>
+        <div class="lightbox-content animate__animated animate__zoomIn">
+            <button class="close-btn" aria-label="Fechar detalhes">
+                <span>&times;</span>
+            </button>
+            <div class="lightbox-body">
+                <div class="lightbox-image-wrapper">
+                    <img id="lightbox-image" src="" alt="Imagem do produto">
+                </div>
+                <div class="lightbox-info">
+                    <h2 id="lightbox-title"></h2>
+                    <p id="lightbox-description"></p>
+                    <p id="lightbox-price" class="price"></p>
+                    <p id="lightbox-category" class="category-label"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; <span id="year"></span> RCM Lords. Todos os direitos reservados.</p>
+        <p class="footer-note">Caso prático: JavaScript, AJAX, JSON, bibliotecas externas e PHP.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

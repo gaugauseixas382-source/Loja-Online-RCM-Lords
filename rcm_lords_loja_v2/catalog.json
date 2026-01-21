@@ -1,0 +1,66 @@
+{
+    "categories": [
+        {
+            "id": "cds",
+            "name": "CDs"
+        },
+        {
+            "id": "vinil",
+            "name": "Vinil"
+        },
+        {
+            "id": "merch",
+            "name": "Merchandise"
+        }
+    ],
+    "products": [
+        {
+            "id": "1",
+            "name": "CD - RCM Lords: Inferno Sonoro",
+            "description": "Álbum em CD com 12 faixas, incluindo os singles 'Chamas da Noite' e 'Ritual Urbano'.",
+            "price": "14.99",
+            "category": "cds",
+            "image": "images/cd-inferno-sonoro.jpg"
+        },
+        {
+            "id": "2",
+            "name": "CD - RCM Lords: Eclipse Vermelho",
+            "description": "Segundo álbum da banda, com sonoridade mais pesada e letras sombrias.",
+            "price": "16.99",
+            "category": "cds",
+            "image": "images/cd-eclipse-vermelho.jpg"
+        },
+        {
+            "id": "3",
+            "name": "Vinil - RCM Lords: Live at Lisbon",
+            "description": "Edição especial em vinil vermelho translúcido, gravado ao vivo em Lisboa.",
+            "price": "24.99",
+            "category": "vinil",
+            "image": "images/vinil-live-lisbon.jpg"
+        },
+        {
+            "id": "4",
+            "name": "T-Shirt RCM Lords (Preta)",
+            "description": "T-shirt preta com logótipo RCM Lords em vermelho. 100% algodão.",
+            "price": "19.99",
+            "category": "merch",
+            "image": "images/tshirt-preta-logo.jpg"
+        },
+        {
+            "id": "5",
+            "name": "Hoodie RCM Lords (Vermelho)",
+            "description": "Hoodie vermelho com estampado frontal e traseiro. Edição limitada.",
+            "price": "34.99",
+            "category": "merch",
+            "image": "images/hoodie-vermelho.jpg"
+        },
+        {
+            "id": "6",
+            "name": "Boné RCM Lords",
+            "description": "Boné preto ajustável com logótipo bordado em vermelho.",
+            "price": "14.50",
+            "category": "merch",
+            "image": "images/bone-preto.jpg"
+        }
+    ]
+}
