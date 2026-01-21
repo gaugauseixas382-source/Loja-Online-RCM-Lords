@@ -33,4 +33,8 @@ O catálogo é carregado dinamicamente a partir de um ficheiro JSON, utilizando 
 https://github.com/gaugauseixas382-source/Loja-Online-RCM-Lords/
 
 ## 📂 Estrutura do Projeto
-
+/index.html
+/styles.css
+/scripts.js
+/catalog.json
+/images/
